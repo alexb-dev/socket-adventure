@@ -198,11 +198,10 @@ class Server(object):
         
         :return: None
         """
-        received = self.input_buffer.split(" ")
+        received = self.input_buffer.strip().split(" ")
 
         command = received.pop(0)
         arguments = " ".join(received)
-
         # If `self.input_buffer` was "say Is anybody here?", then:
         # `command` should now be "say" and `arguments` should now be "Is anybody here?".
         #
