@@ -215,7 +215,7 @@ class Server(object):
              'say': self.say,
              }[command](arguments)
         except KeyError:
-            self.output_buffer = 'Invalid command!'
+            self.output_buffer = 'Invalid command! Use quit, move or say'
         
     def push_output(self):
         """
